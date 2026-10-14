@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vidyamata High School</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f2f5f9;color:#14233b}
+header{background:#071d3a;color:white;text-align:center;padding:25px 10px;border-bottom:4px solid #e8bb4b}
+header h1{color:#f4cc69;margin:0}nav{background:white;padding:12px;display:flex;justify-content:center;flex-wrap:wrap;gap:8px}
+nav a{background:#102d52;color:white;text-decoration:none;padding:11px 15px;border-radius:6px;font-weight:bold}
+nav a:hover,nav a.active{background:#e8bb4b;color:#071d3a}
+.hero{min-height:350px;padding:45px 25px;display:flex;align-items:center;background:linear-gradient(90deg,#071d3add,#071d3a33),url("school.jpg") center/cover}
+.hero-box{max-width:500px;background:#071d3add;color:white;padding:25px;border-radius:12px}.hero h2{color:#f4cc69;font-size:38px;margin:8px 0}
+button,.btn{background:#e8bb4b;color:#071d3a;border:0;padding:12px 18px;border-radius:6px;cursor:pointer;font-weight:bold;text-decoration:none;display:inline-block;margin:5px}
+.page{display:none;max-width:1100px;margin:auto;padding:30px 20px}.page.active{display:block}
+h2,h3{color:#102d52}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.card{background:white;padding:18px;border-radius:12px;text-align:center;box-shadow:0 4px 15px #00000012}.card img{width:100%;height:190px;object-fit:cover;border-radius:8px;background:#dce4ed}
+footer{background:#071d3a;color:white;text-align:center;padding:22px;border-top:4px solid #e8bb4b}
+@media(max-width:600px){.hero h2{font-size:29px}}
+</style>
+</head>
+<body>
+<header><h1>VIDYAMATA HIGH SCHOOL</h1><p>Learn • Grow • Shine</p><p>Assisi Nagar, Solapur Bypass Road, Dharashiv – 413501</p></header>
+<nav>
+<a href="#" class="active" onclick="showPage('home',this);return false;">Home</a>
+<a href="#" onclick="showPage('about',this);return false;">About School</a>
+<a href="#" onclick="showPage('principal',this);return false;">Principal</a>
+<a href="#" onclick="showPage('staff',this);return false;">Teaching Staff</a>
+<a href="#" onclick="showPage('gallery',this);return false;">Ground & Gallery</a>
+<a href="#" onclick="showPage('contact',this);return false;">Contact</a>
+</nav>
+<section id="home" class="page active">
+<div class="hero"><div class="hero-box"><p>ENGLISH MEDIUM SCHOOL</p><h2>Welcome to Vidyamata High School!</h2><p>Quality Education • Strong Values • Bright Future</p><button onclick="showPage('about')">Explore Our School →</button></div></div>
+<h2>Explore Our School</h2><div class="cards">
+<div class="card"><img src="school.jpg" alt="School Building"><h3>About School</h3><button onclick="showPage('about')">Read More</button></div>
+<div class="card"><img src="principal.jpg" alt="Principal"><h3>Principal</h3><button onclick="showPage('principal')">Meet Principal</button></div>
+<div class="card"><img src="teacher-komal.jpg" alt="Teacher"><h3>Teaching Staff</h3><button onclick="showPage('staff')">Meet Teachers</button></div>
+<div class="card"><img src="ground.jpg" alt="School Ground"><h3>Ground & Gallery</h3><button onclick="showPage('gallery')">View Gallery</button></div></div></section>
+<section id="about" class="page"><h2>About Our School</h2><img src="school.jpg" alt="School Building" style="width:100%;max-height:350px;object-fit:cover;border-radius:12px"><p>Vidyamata High School is an English-medium school in Dharashiv.</p><p>Our aim is to support learning, discipline, confidence and good values.</p><button onclick="showPage('home')">← Back to Home</button></section>
+<section id="principal" class="page"><h2>Our Principal</h2><div class="card" style="max-width:400px;margin:auto"><img src="principal.jpg" alt="Principal Amol Gonsalves"><h3>Amol Gonsalves</h3><p>Principal, Vidyamata High School</p></div><button onclick="showPage('home')">← Back to Home</button></section>
+<section id="staff" class="page"><h2>Our Teaching Staff</h2><div class="cards">
+<div class="card"><img src="teacher-komal.jpg" alt="Komal"><h3>Komal</h3><p>Marathi</p></div><div class="card"><img src="teacher-english.jpg" alt="English Teacher"><h3>English Teacher</h3><p>Vice Principal</p></div><div class="card"><img src="teacher-pallavi.jpg" alt="Pallavi"><h3>Pallavi</h3><p>Hindi</p></div><div class="card"><img src="teacher-priti.jpg" alt="Priti"><h3>Priti</h3><p>Social Science</p></div><div class="card"><img src="teacher-hajra.jpg" alt="Hajra"><h3>Hajra</h3><p>Science</p></div><div class="card"><img src="teacher-shital.jpg" alt="Shital"><h3>Shital</h3><p>Computer</p></div><div class="card"><img src="teacher-vanita.jpg" alt="Vanita"><h3>Vanita</h3><p>Sanskrit</p></div><div class="card"><img src="teacher-nitin.jpg" alt="Nitin"><h3>Nitin</h3><p>Physical Education</p></div></div><button onclick="showPage('home')">← Back to Home</button></section>
+<section id="gallery" class="page"><h2>Ground & Gallery</h2><div class="cards"><div class="card"><img src="ground.jpg" alt="Ground"><p>School Ground</p></div><div class="card"><img src="gallery1.jpg" alt="School Event"><p>School Activities</p></div><div class="card"><img src="gallery2.jpg" alt="School Event"><p>School Events</p></div></div><button onclick="showPage('home')">← Back to Home</button></section>
+<section id="contact" class="page"><h2>Contact Us</h2><div class="card"><p><b>Vidyamata High School</b></p><p>Assisi Nagar, Solapur Bypass Road, Dharashiv – 413501</p><p>Principal: Amol Gonsalves</p><p>Add the official school phone number here.</p></div><button onclick="showPage('home')">← Back to Home</button></section>
+<footer><p>Vidyamata High School © 2026</p><p>Learn • Grow • Shine</p></footer>
+<script>
+function showPage(pageId,clickedLink){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(pageId).classList.add('active');document.querySelectorAll('nav a').forEach(a=>a.classList.remove('active'));if(clickedLink)clickedLink.classList.add('active');window.scrollTo(0,0);}
+</script>
+</body></html>
